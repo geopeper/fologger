@@ -35,16 +35,6 @@
 			path = fologger;
 			sourceTree = "<group>";
 		};
-		CA896A632EED37A700966E11 /* fologgerTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = fologgerTests;
-			sourceTree = "<group>";
-		};
-		CA896A6D2EED37A700966E11 /* fologgerUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = fologgerUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				CA896A552EED37A600966E11 /* fologger */,
-				CA896A632EED37A700966E11 /* fologgerTests */,
-				CA896A6D2EED37A700966E11 /* fologgerUITests */,
 				CA896A542EED37A600966E11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +118,6 @@
 			dependencies = (
 				CA896A622EED37A700966E11 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CA896A632EED37A700966E11 /* fologgerTests */,
-			);
 			name = fologgerTests;
 			packageProductDependencies = (
 			);
@@ -153,9 +138,6 @@
 			dependencies = (
 				CA896A6C2EED37A700966E11 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CA896A6D2EED37A700966E11 /* fologgerUITests */,
-			);
 			name = fologgerUITests;
 			packageProductDependencies = (
 			);
@@ -170,6 +152,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
@@ -395,8 +380,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3HT29Z8RNR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,8 +413,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3HT29Z8RNR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

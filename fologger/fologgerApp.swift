@@ -11,6 +11,7 @@ import SwiftUI
 struct fologgerApp: App {
     var body: some Scene {
         WindowGroup {
+            // 修正這裡：把 ContentView() 加進去
             ContentView()
         }
     }
