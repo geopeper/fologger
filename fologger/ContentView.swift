@@ -214,7 +214,7 @@ struct ContentView: View {
     @State private var currentTime = Date()
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    // 🟢 新增：自定義時間格式器 (MM/dd HH:mm)
+    // 自定義時間格式器 (MM/dd HH:mm)
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM/dd HH:mm"
@@ -293,7 +293,6 @@ struct ContentView: View {
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                     
-                    // 🟢 修改：使用自定義的 dateFormatter
                     Text(currentTime, formatter: dateFormatter)
                         .font(.system(.body, design: .monospaced))
                         .fontWeight(.bold)
@@ -427,7 +426,7 @@ struct ContentView: View {
                 case .light:
                     inputRow(title: "光度 (Lux)", placeholder: "例如 350", isNumber: true)
                 case .tree:
-                    inputRow(title: "胸徑 (cm)", placeholder: "例如 15.5", isNumber: true)
+                    inputRow(title: "樹高 (公尺)", placeholder: "例如 5.5", isNumber: true)
                     noteRow(title: "樹種/特徵", placeholder: "例如 樟樹, 根系隆起")
                 case .microclimate:
                     inputRow(title: "溫度 (°C)", placeholder: "例如 28.5", isNumber: true)
@@ -547,7 +546,6 @@ struct ContentView: View {
                     Text(r.type.rawValue)
                         .font(.caption.bold())
                     
-                    // 🟢 修改：列表的時間也同步套用 MM/dd HH:mm 格式
                     Text(r.timestamp, formatter: dateFormatter)
                         .font(.caption2)
                         .foregroundStyle(.secondary)
@@ -580,8 +578,12 @@ struct ContentView: View {
         
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         
+        // 🟢 修改：總是清空數值，但如果是「自定義」模式，保留文字 (標籤/類別) 不清空
         inputValue = ""
-        inputNote = ""
+        
+        if selectedMode != .custom {
+            inputNote = ""
+        }
     }
 }
 
