@@ -262,7 +262,7 @@ struct ContentView: View {
                 }
             }
             .listStyle(.insetGrouped)
-            .navigationTitle("Geo Field Logger")
+            .navigationTitle("Field Observation Logger")
             .scrollDismissesKeyboard(.interactively)
             .onAppear { controller.startLocation() }
             .onReceive(timer) { input in currentTime = input }
